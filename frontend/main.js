@@ -1,3 +1,4 @@
+var serverurl = "http://127.0.0.1:5000/sharetik"
 function copyfunc() {
     // Get the text field
     var copyText = document.getElementById("outputfield");
@@ -14,5 +15,11 @@ function copyfunc() {
   } 
 function getoutput(){
     var infield = document.getElementById("infield");
-    
+    var outputfield = document.getElementById("outputfield")
+    url = `${serverurl}?url=${infield.value}`
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", url, false ); // false for synchronous request
+    xmlHttp.send( null );
+    var rjson = JSON.parse(xmlHttp.responseText);
+    outputfield.value = rjson["message"];
 }
