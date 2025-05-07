@@ -2,10 +2,9 @@ from flask import Flask, jsonify
 from flask import request
 import requests
 import uuid     
-app = Flask(__name__)   # Flask constructor 
-  
-# A decorator used to tell the application 
-# which URL is associated function 
+app = Flask(__name__)  
+
+# Main Function
 @app.route('/sharetik',methods=["GET"])       
 def urlconv():
     url = request.args.get("url")
