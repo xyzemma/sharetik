@@ -1,5 +1,7 @@
 # ShareTik
 ### Convert TikTok share links to TikTok videoplayer links, making them viewable in mobile browsers
+## Status
+As of the 9th of June, 2025, Sharetik is fully functional and feature-complete.
 ## Dependencies:
 - [Python ≥ 3.6](https://python.org)
 - [Requests](https://pypi.org/project/requests/)
