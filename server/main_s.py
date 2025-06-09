@@ -1,8 +1,10 @@
 from flask import Flask, jsonify
 from flask import request
 import requests
-import uuid     
+import uuid
+from flask_cors import CORS
 app = Flask(__name__)  
+CORS(app)
 
 # Main Function
 @app.route('/sharetik',methods=["GET"])       
@@ -20,6 +22,3 @@ def urlconv():
     response = jsonify(message=transformedurl)
     response.headers.add("Access-Control-Allow-Origin", "*")
     return response 
-  
-if __name__=='__main__': 
-   app.run(debug=True) 
