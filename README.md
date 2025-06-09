@@ -4,4 +4,5 @@
 - [Python ≥ 3.6](https://python.org)
 - [Requests](https://pypi.org/project/requests/)
 - [Flask](https://pypi.org/project/Flask/)
+- [flask-cors](https://pypi.org/project/flask-cors/)
   
